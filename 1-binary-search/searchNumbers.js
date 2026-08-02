@@ -2,22 +2,19 @@
  * @speed = O(log n)
  */
 
-// 1. create sorted array
-const myList = [];
+const list = [];
 [...Array(1000)].forEach((el, i) => {
     el = i + 1;
-    myList.push(el);
+    list.push(el);
 });
 
-// 2. perform binary search
-// return index of "item"
-function binarySearch(list = [], item) {
+function binarySearch(arr = [], item) {
     let low = 0;
-    let high = list.length - 1;
+    let high = arr.length - 1;
 
     while (low <= high) {
         const mid = Math.floor((low + high) / 2);
-        const guess = list[mid];
+        const guess = arr[mid];
 
         if (guess === item) return mid;
         if (guess > item) {
@@ -30,5 +27,5 @@ function binarySearch(list = [], item) {
     return null;
 };
 
-const result = binarySearch(myList, 30);
+const result = binarySearch(list, 30);
 console.log(result);
