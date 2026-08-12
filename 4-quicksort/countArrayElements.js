@@ -11,6 +11,6 @@ console.log(result);
 function countArrayElements(arr = []) {
     if (arr[0] === undefined) return 0;
     
-    const [, ...arrWithoutFirstEl] = arr;
+    const arrWithoutFirstEl = arr.slice(1);
     return 1 + countArrayElements(arrWithoutFirstEl);
 };
