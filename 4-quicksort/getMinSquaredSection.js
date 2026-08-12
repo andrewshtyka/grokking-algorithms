@@ -9,7 +9,7 @@ function getMinSquaredSection(width = 0, height = 0) {
     if (width === height) return width;
 
     // avoid stack overflow
-    if (width < 0.5 && height < 0.5) return Number(width.toFixed(2));
+    if (width < 0.5 && height < 0.5) return Number(width.toFixed(3));
 
     // decrease problem
     const minSide = width < height ? width : height;
