@@ -1,5 +1,6 @@
 /**
- * @speed = O(n log n)
+ * Selection sort
+ * Speed: O(n^2)
  */
 
 const list = [];

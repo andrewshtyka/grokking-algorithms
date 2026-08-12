@@ -4,7 +4,9 @@ Based on "Grokking Algorithms" book by Aditya Y. Bhargava.
 
 ## Speed
 
-1. Binary search: `O(log n)` time, `O(1)` memory;
-2. Selection sort: `O(n log n)` time;
-3. \-
-4. Recursive binary search: `O(log n)` time, `O(log n)` memory (worse than iterative approach)
+- Binary search: `O(log n)` time, `O(1)` memory;
+- Selection sort: `O(n^2)` time;
+- \-
+- Recursive binary search: `O(log n)` time, `O(log n)` memory (worse than iterative approach)
+- Quicksort: worst case `O(n^2)`, average case `O(n log n)` (depends on chosen "pivot". But in average, average case will happen.)
+

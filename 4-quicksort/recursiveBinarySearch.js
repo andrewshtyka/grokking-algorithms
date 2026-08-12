@@ -4,7 +4,7 @@
  */
 
 const input = [1, 4, 10, 16, 29];
-const result = recursiveBinarySearch(input, 29);
+const result = recursiveBinarySearch(input, 4);
 console.log(result);
 
 
@@ -18,7 +18,7 @@ function recursiveBinarySearch(
     
     const indexMid = Math.floor((indexLow + indexHigh) / 2);
     const guess = arr[indexMid];
-
+    
     if (guess === item) return indexMid;
 
     if (guess > item) {
