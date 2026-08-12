@@ -1,5 +1,5 @@
 const result = getSumArrayNumbers([2, 4, 6]);
-// console.log(result);
+console.log(result);
 
 function getSumArrayNumbers(arr = []) {
     // base case
