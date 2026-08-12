@@ -13,8 +13,6 @@ const list = [];
 const result = quickSort(list);
 console.log(result);
 
-
-
 function quickSort(arr = []) {
     if (arr.length < 2) return arr;
 

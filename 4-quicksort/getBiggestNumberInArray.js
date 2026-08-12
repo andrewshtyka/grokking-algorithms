@@ -4,7 +4,7 @@
  */
 
 const result = getBiggestNumberInArray([2, 221, 9]);
-console.log(result);
+// console.log(result);
 
 function getBiggestNumberInArray(arr = []) {
     if (arr.length === 0) return;
@@ -18,3 +18,5 @@ function getBiggestNumberInArray(arr = []) {
     
     return getBiggestNumberInArray(nextArr);
 };
+
+
