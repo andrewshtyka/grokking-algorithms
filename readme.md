@@ -9,5 +9,5 @@ Based on "Grokking Algorithms" book by Aditya Y. Bhargava.
 - \-
 - Recursive binary search: `O(log n)` time, `O(log n)` memory (worse than iterative approach)
 - Quicksort: worst case `O(n^2)`, average case `O(n log n)` (depends on chosen "pivot". But in average, average case will happen.)
-- `Map` retrieves data **faster** than `Object` (proofs in `5-hash-tables`)
+- Hash tables (Map): worst case `O(n)`, average case `O(1)` (depends on collisions)
 
