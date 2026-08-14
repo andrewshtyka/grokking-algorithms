@@ -15,3 +15,6 @@ const end_2 = performance.now();
 
 console.log(end_1 - start_1, "get", getTomObj, "from Object");
 console.log(end_2 - start_2, "get", getTomMap, "from Map");
+
+const r = {} + [];
+console.log(r);
