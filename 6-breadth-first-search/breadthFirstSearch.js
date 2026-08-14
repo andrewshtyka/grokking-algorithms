@@ -15,12 +15,13 @@ function breadthFirstSearch(input = "") {
     graph.get(input).forEach(item => {
         searchQueue.push(item);
     });
-    const checked = [];
+    
+    const searched = new Set();
     
     while (searchQueue.length > 0) {
         const currentItem = searchQueue.shift();
 
-        if (!checked.includes(currentItem)) {
+        if (!searched.has(currentItem)) {
             if (itemMeetsConditions(currentItem)) {
                 console.log(currentItem, "meets conditions!");
                 return true;
@@ -28,6 +29,7 @@ function breadthFirstSearch(input = "") {
                 graph.get(currentItem).forEach(item => {
                     searchQueue.push(item);
                 });
+                searched.add(currentItem);
             };
         };
     };

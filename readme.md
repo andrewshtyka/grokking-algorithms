@@ -12,3 +12,4 @@ Check folders to find examples with functionality (from the table below).
 | **Selection sort** | `O(n^2)` time | |
 | **Quicksort** | worst case `O(n^2)`, average case `O(n log n)` | depends on chosen "pivot". But in average, average case will happen |
 | **Hash tables (Map)** | worst case `O(n)`, average case `O(1)` | depends on collisions, and on expanding hash table (takes time of `O(n)`) |
+| **Breadth-first search (BFS)** | `O(V+E)` | V - vertices (nodes), E - edges (lines that connect Vertices) |
