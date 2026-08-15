@@ -5,18 +5,18 @@ const graph = {
     D: { B: 5, C: 1 },
 };
 
-const result = dijkstraSearch(graph, "A");
-console.log(result);
+const result = dijkstraSearchMap(graph, "A");
+console.log("result", result);
 
-function dijkstraSearch(graph, start = "") {
-    const distances = {};
+function dijkstraSearchMap(graph, start = "") {
+    const distances = new Map();
     const visitedNodes = new Set();
     const queue = [start];
 
     for (const node in graph) {        
-        distances[node] = Infinity;
+        distances.set(node, Infinity);
     };
-    distances[start] = 0;
+    distances.set(start, 0);
 
     while (queue.length > 0) {
         const currentNode = queue.shift();
@@ -27,18 +27,15 @@ function dijkstraSearch(graph, start = "") {
             const neighbours = graph[currentNode];
 
             for (const item in neighbours) {
-                const newDistance = distances[currentNode] + neighbours[item];
+                const newDistance = distances.get(currentNode) + neighbours[item];
                 
-                if (newDistance < distances[item]) {
-                    distances[item] = newDistance;
+                if (newDistance < distances.get(item)) {
+                    distances.set(item, newDistance);
                     queue.push(item);
                 };
             };
         };
     };
 
-    return {
-        path: distances,
-        length: distances[Object.keys(distances)[Object.keys(distances).length - 1]]
-    };
+    return distances;
 };
