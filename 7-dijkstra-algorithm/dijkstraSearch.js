@@ -6,7 +6,7 @@ const graph = {
 };
 
 const result = dijkstraSearch(graph, "A");
-// console.log(result);
+console.log(result);
 
 function dijkstraSearch(graph, start = "") {
     const distances = {};
@@ -16,7 +16,6 @@ function dijkstraSearch(graph, start = "") {
     for (const node in graph) {        
         distances[node] = Infinity;
     };
-
     distances[start] = 0;
 
     while (queue.length > 0) {
@@ -33,18 +32,13 @@ function dijkstraSearch(graph, start = "") {
                 if (newDistance < distances[item]) {
                     distances[item] = newDistance;
                     queue.push(item);
-                }
-            }
-        }
-    }
-
-    let lengthTotal = null;
-    for (const value of Object.values(distances)) {
-        lengthTotal += value;
+                };
+            };
+        };
     };
 
     return {
         path: distances,
-        length: lengthTotal
+        length: distances[Object.keys(distances)[Object.keys(distances).length - 1]]
     };
 };
