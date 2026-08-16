@@ -28,6 +28,7 @@ function dijkstraSearchMap(graph, start = "") {
 
             for (const item in neighbours) {
                 const newDistance = distances.get(currentNode) + neighbours[item];
+                console.log(newDistance, distances.get(item));
                 
                 if (newDistance < distances.get(item)) {
                     distances.set(item, newDistance);
