@@ -15,7 +15,6 @@ function breadthFirstSearch(input = "") {
     graph.get(input).forEach(item => {
         searchQueue.push(item);
     });
-    
     const searched = new Set();
     
     while (searchQueue.length > 0) {
