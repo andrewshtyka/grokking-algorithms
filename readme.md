@@ -16,3 +16,5 @@ Another source of truth for complexity of [sorting] algorithms is [Wikipedia](ht
 | **Hash tables (Map)** | `O(n)` ... `O(1)` | `O(n)` | depends on collisions, and on expanding hash table (takes time of `O(n)`), [wiki](https://en.wikipedia.org/wiki/Hash_table) |
 | **Breadth-first search (BFS)** | `O(V+E)` | `O(V)` | V - vertices (nodes), E - edges (lines that connect Vertices) |
 | **Dijkstra algorithm** | `O((V^2) log V)` ... `O((V+E) log V)` | `O(V)` | E weight must be >= 0 |
+
+For NP-complete problems (like `TSP (Traveling salesman problem)`) use greedy algorithm: apply the best choice possible on each step.
